@@ -14,6 +14,7 @@ class ArgumentsController < ApplicationController
   # GET /arguments/1.json
   def show
     @argument = Argument.find(params[:id])
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
