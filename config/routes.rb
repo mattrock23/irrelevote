@@ -12,6 +12,7 @@ Irrelevote::Application.routes.draw do
 
   get 'about' => 'pages#about'
   get 'archives' => 'pages#archives'
+  get 'user/:id' => 'pages#user'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

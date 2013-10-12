@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
   # GET /comments/new
   # GET /comments/new.json
   def new
-    @comment = Comment.new
+    @comment = current_user.comments.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(params[:comment])
+    @comment = current_user.comments.new(params[:comment])
 
     respond_to do |format|
       if @comment.save

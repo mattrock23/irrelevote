@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   	# gotta get Arguments in here somehow
   	@arguments = Argument.all
   end
+
+  def user
+  	@user = User.find(params[:id])
+  end
 end
