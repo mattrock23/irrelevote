@@ -1,5 +1,13 @@
 Irrelevote::Application.routes.draw do
 
+  resources :comments
+
+
+  resources :arguments
+
+
+  devise_for :users
+
   root :to => 'pages#home'
 
   get 'about' => 'pages#about'

@@ -1,0 +1,23 @@
+<h1>Listing arguments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @arguments.each do |argument| %>
+  <tr>
+    <td><%= argument.name %></td>
+    <td><%= link_to 'Show', argument %></td>
+    <td><%= link_to 'Edit', edit_argument_path(argument) %></td>
+    <td><%= link_to 'Destroy', argument, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Argument', new_argument_path %>
