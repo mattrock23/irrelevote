@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Text</th>
+    <th>Added by</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,6 +12,7 @@
 <% @comments.each do |comment| %>
   <tr>
     <td><%= comment.text %></td>
+    <td><%= link_to comment.user.email, "user/#{comment.user.id}" %></td>
     <td><%= link_to 'Show', comment %></td>
     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
     <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

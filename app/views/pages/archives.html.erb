@@ -1,5 +1,5 @@
 Archives
 
 <% @arguments.each do |argument| %>
-<p><%= link_to argument.name, argument %></p>
+<p><%= link_to argument.name, argument %> added by <%= link_to argument.user.email, "user/#{argument.user.id}" %></p>
 <% end %>

@@ -1,0 +1,6 @@
+<h1>User: <%= @user.email %></h1>
+
+<p>Comments: </p>
+<% @user.comments.each do |comment| %>
+<p><%= comment.text %> in ___ Argument</p>
+<% end %>
